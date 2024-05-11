@@ -16,6 +16,7 @@ var (
 	NoErr        bool
 	NoColor      bool
 	Exit         bool
+	Verbose      bool
 	RegFilePaths []string
 )
 
@@ -36,6 +37,7 @@ func init() {
 	flag.BoolVar(&NoColor, "nocolor", false, "Without color")
 	flag.BoolVar(&Exit, "exit", false, "Exit after processing")
 
+	flag.BoolVar(&Verbose, "verbose", false, "Verbose line")
 	flag.Parse()
 
 	separatorFunc := func(c rune) bool {

@@ -58,6 +58,9 @@ func main() {
 
 			if rawLine := scanner.Text(); len(rawLine) > 1 {
 				// fmt.Printf("[%d] %s\n", index, rawLine)
+				if Verbose {
+					fmt.Printf("[%d] %s\n", index, rawLine)
+				}
 
 				commentIndex := strings.Index(rawLine, ";")
 				if commentIndex != -1 {
